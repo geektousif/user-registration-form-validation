@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>User Registration</title>
+  </head>
+  <body>
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-24 mx-auto flex gap-6">
+        <form
+          id="form"
+          class="lg:w-2/6 bg-gray-100 rounded-lg p-8 flex flex-col ml-auto mt-10 md:mt-0"
+        >
+          <h2
+            class="text-gray-900 text-xl text-emerald-900 mx-auto font-bold title-font mb-5"
+          >
+            Hashtag User Registration
+          </h2>
+          <div class="relative mb-4">
+            <label
+              for="name"
+              class="leading-7 font-medium text-md text-gray-900"
+              >Name :</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="w-full bg-white rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+            <small class="text-red-600 text-sm" id="error"></small>
+          </div>
+          <div class="relative mb-4">
+            <label
+              for="email"
+              class="leading-7 font-medium text-md text-gray-900"
+              >Email :</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full bg-white rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+            <small class="text-red-600 text-sm" id="error"></small>
+          </div>
+          <div class="relative mb-4">
+            <label
+              for="phone"
+              class="leading-7 font-medium text-md text-gray-900"
+              >Phone No. :</label
+            >
+            <input
+              type="number"
+              id="phone"
+              name="phone"
+              class="w-full bg-white rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+            <small class="text-red-600 text-sm" id="error"></small>
+          </div>
+          <div class="relative flex mb-4">
+            <div>
+              <label
+                for="dob"
+                class="leading-7 font-medium text-md text-gray-900"
+                >Date of Birth :</label
+              >
+              <input
+                type="date"
+                id="dob"
+                name="dob"
+                class="w-full bg-white rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              />
+              <small class="text-red-600 text-sm" id="error"></small>
+            </div>
+            <div class="text-center my-auto">
+              <label
+                for="age"
+                class="leading-7 font-medium text-md text-gray-900"
+                >Age</label
+              >
+              <input
+                type="text"
+                id="age"
+                name="age"
+                class="w-1/2 bg-white rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                disabled
+                value="0"
+              /><span class="pl-1">yrs</span>
+            </div>
+          </div>
+          <button
+            class="text-white bg-green-500 border-0 py-3 focus:outline-none hover:bg-green-600 rounded text-lg"
+            type="submit"
+          >
+            Register
+          </button>
+        </form>
+        <div class="lg:w-3/5 lg:pr-0 pr-0">
+          <table class="w-full">
+            <thead class="border-b">
+              <tr>
+                <th
+                  scope="col"
+                  class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                >
+                  Name
+                </th>
+                <th
+                  scope="col"
+                  class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                >
+                  Email
+                </th>
+                <th
+                  scope="col"
+                  class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                >
+                  Phone
+                </th>
+                <th
+                  scope="col"
+                  class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                >
+                  Date of Birth
+                </th>
+              </tr>
+            </thead>
+            <tbody id="userTable"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
